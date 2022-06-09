@@ -2,7 +2,7 @@ package se.vallett.kdex.api.manga.list.params
 
 import se.vallett.kdex.api.client.params.IDefaultQueryParam
 
-class IncludedTagsMode : IDefaultQueryParam<IncludedTagsMode> {
+object IncludedTagsMode : IDefaultQueryParam<IncludedTagsModeOption> {
 
     enum class IncludedTagsModeOption {
         AND,
