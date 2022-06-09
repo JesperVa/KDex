@@ -12,8 +12,15 @@ repositories {
     mavenCentral()
 }
 
+object Versions {
+    const val ktorVersion = "2.0.2"
+}
+
 dependencies {
     testImplementation(kotlin("test"))
+
+    implementation("io.ktor:ktor-client-core:${Versions.ktorVersion}")
+    implementation("io.ktor:ktor-client-okhttp:${Versions.ktorVersion}")
 }
 
 tasks.test {
