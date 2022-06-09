@@ -1,5 +1,6 @@
 package se.vallett.kdex.api.manga.list
 
+import se.vallett.kdex.api.client.IRequestBuilder
 import se.vallett.kdex.api.client.params.IQueryParam
 import se.vallett.kdex.api.manga.list.params.Artists
 import se.vallett.kdex.api.manga.list.params.Authors
@@ -23,13 +24,13 @@ import se.vallett.kdex.api.manga.list.params.Title
 import se.vallett.kdex.api.manga.list.params.UpdatedAtSince
 import se.vallett.kdex.api.manga.list.params.Year
 
-class MangaList(parameters : Iterable<IQueryParam<*>> = emptyList())  {
+class MangaList(parameters : Iterable<String> = emptyList())  {
     val endPoint = "/manga"
 
 
     data class Builder(
         val parameters: ArrayList<String> = ArrayList()
-    ) {
+    ) : IRequestBuilder<MangaList> {
         fun artists(artists : Iterable<String>) = apply { parameters.add(Artists.createParam(artists)) }
         fun authors(authors : Iterable<String>) = apply { parameters.add(Authors.createParam(authors)) }
         fun availableTranslatedLanguage(availableTranslatedLanguage: Iterable<String>) = apply { parameters.add(AvailableTranslatedLanguage.createParam(availableTranslatedLanguage)) }
@@ -52,6 +53,10 @@ class MangaList(parameters : Iterable<IQueryParam<*>> = emptyList())  {
         fun title(title: String) = apply { parameters.add(Title.createParam(title)) }
         fun updatedAtSince(updatedAtSince: String) = apply { parameters.add(UpdatedAtSince.createParam(updatedAtSince)) }
         fun year(year: Int) = apply { parameters.add(Year.createParam(year)) }
+
+        override fun buildRequest() : MangaList {
+            return MangaList(parameters)
+        }
 
 
     }
