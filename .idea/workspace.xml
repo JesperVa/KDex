@@ -5,19 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c88161e-05f3-46e6-ac71-594bab932b83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/IKDexClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/IRequestBuilder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/KDexClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/params/ArrayQueryParams.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/params/DefaultParam.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/params/IQueryParam.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/params/IValidatedQueryValues.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/client/params/exceptions/InvalidParamValueException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/MangaList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/MangaListBuilder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Artists.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Authors.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/AvailableTranslatedLanguage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/ContentRating.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/CreatedAtSince.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/ExcludedOriginalLanguage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/ExcludedTags.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/ExcludedTagsMode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Group.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/HasAvailableChapters.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Ids.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/IncludedTags.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/IncludedTagsMode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Includes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Limit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Offset.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/OriginalLanguage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/PublicationDemographic.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Status.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Title.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/UpdatedAtSince.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/se/vallett/kdex/api/manga/list/params/Year.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/se/vallett/kdex/api/manga/list/params/AuthorsTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/se/vallett/kdex/api/manga/list/params/StatusTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +52,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,9 +81,28 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="se.vallett.kdex.api.client.params.exceptions" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="se.vallett.kdex.api.client.params" />
+      <recent name="se.vallett.kdex.api.manga.list" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="se.vallett.kdex.api.manga.list.params" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +111,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654786344183</updated>
-      <workItem from="1654786346142" duration="377000" />
+      <workItem from="1654786346142" duration="11137000" />
     </task>
     <servers />
   </component>
