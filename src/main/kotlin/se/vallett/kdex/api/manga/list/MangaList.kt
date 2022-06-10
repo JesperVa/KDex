@@ -7,7 +7,7 @@ import se.vallett.kdex.api.manga.list.paramvalues.MangaContentRating
 import se.vallett.kdex.api.manga.list.paramvalues.MangaPublicationDemographic
 import se.vallett.kdex.api.manga.list.paramvalues.MangaStatus
 
-class MangaList(private val queryParams: List<Pair<String, String>>) : DefaultRequest(queryParams) {
+class MangaList(queryParams: List<Pair<String, String>>) : DefaultRequest(queryParams) {
 
     override val defaultEndpoint: String
         get() = "manga"
