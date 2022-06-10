@@ -169,7 +169,6 @@ internal class MangaListRequestTest {
     fun testCreatedAtSince() {
         val builder = MangaList.Builder()
 
-        //Very suitable ratings
         val request = builder.createdAtSince("2022-02-05").build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?createdAtSince=2022-02-05", request)
@@ -179,7 +178,6 @@ internal class MangaListRequestTest {
     fun testUpdatedAtSince() {
         val builder = MangaList.Builder()
 
-        //Very suitable ratings
         val request = builder.updatedAtSince("2022-02-05").build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?updatedAtSince=2022-02-05", request)
@@ -189,7 +187,6 @@ internal class MangaListRequestTest {
     fun testIncludes() {
         val builder = MangaList.Builder()
 
-        //Very suitable ratings
         val request = builder.includes(listOf("test", "test2")).build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?includes[]=test&includes[]=test2", request)
@@ -199,7 +196,6 @@ internal class MangaListRequestTest {
     fun testHasAvailableChapters() {
         val builder = MangaList.Builder()
 
-        //Very suitable ratings
         val request = builder.hasAvailableChapters(true).build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?hasAvailableChapters=true", request)
@@ -209,7 +205,6 @@ internal class MangaListRequestTest {
     fun testGroup() {
         val builder = MangaList.Builder()
 
-        //Very suitable ratings
         val request = builder.group("Mangaka").build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?group=Mangaka", request)
