@@ -7,5 +7,5 @@ enum class MangaPublicationDemographic {
     shoujo,
     josei,
     seinen,
-    none
+    none,
 }

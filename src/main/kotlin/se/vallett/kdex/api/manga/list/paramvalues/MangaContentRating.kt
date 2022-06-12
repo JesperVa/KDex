@@ -6,5 +6,5 @@ enum class MangaContentRating {
     safe,
     suggestive,
     erotica,
-    pornographic
+    pornographic,
 }
