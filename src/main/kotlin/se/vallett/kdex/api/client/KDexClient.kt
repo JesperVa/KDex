@@ -11,5 +11,6 @@ object KDexClient : IKDexClient {
      * See [Get search manga](https://api.mangadex.org/swagger.html#/Manga/get-search-manga)
      */
     override fun searchManga() {
+        TODO("create builder")
     }
 }
