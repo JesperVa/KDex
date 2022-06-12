@@ -4,13 +4,13 @@ abstract class DefaultRequest(private val parameters : List<Pair<String, String>
 
     abstract val defaultEndpoint : String
 
+    //TODO add configured URL
     fun getRequest() : String {
-        //TODO add configured URL
-        return "https://api.mangadex.org/" + defaultEndpoint + buildParameters()
+        return "https://api.mangadex.org/$defaultEndpoint${buildParameters()}"
     }
 
     private fun buildParameters() : String {
-        return "?" + generateParams()
+        return "?${generateParams()}"
     }
 
     private fun generateParams() : String {
