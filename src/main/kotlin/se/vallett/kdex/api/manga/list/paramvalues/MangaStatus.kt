@@ -1,10 +1,12 @@
-@file:Suppress("EnumEntryName") //As the values are defined lowercase in the API
-
 package se.vallett.kdex.api.manga.list.paramvalues
 
-enum class MangaStatus {
-    ongoing,
-    completed,
-    hiatus,
-    cancelled,
+import se.vallett.kdex.api.NamedSerializableValue
+
+enum class MangaStatus : NamedSerializableValue {
+    ONGOING,
+    COMPLETED,
+    HIATUS,
+    CANCELLED;
+
+    override val serializedName: String = name.lowercase()
 }

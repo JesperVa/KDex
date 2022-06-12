@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm") version "1.7.0"
     application
@@ -12,10 +10,6 @@ repositories {
     mavenCentral()
 }
 
-object Versions {
-    const val ktorVersion = "2.0.2"
-}
-
 dependencies {
     testImplementation(kotlin("test"))
 
@@ -23,10 +17,20 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:${Versions.ktorVersion}")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+tasks {
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }

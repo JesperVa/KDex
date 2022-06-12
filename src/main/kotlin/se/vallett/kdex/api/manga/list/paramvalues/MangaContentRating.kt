@@ -1,10 +1,12 @@
-@file:Suppress("EnumEntryName")
-
 package se.vallett.kdex.api.manga.list.paramvalues
 
-enum class MangaContentRating {
-    safe,
-    suggestive,
-    erotica,
-    pornographic
+import se.vallett.kdex.api.NamedSerializableValue
+
+enum class MangaContentRating : NamedSerializableValue {
+    SAFE,
+    SUGGESTIVE,
+    EROTICA,
+    PORNOGRAPHIC;
+
+    override val serializedName: String = name.lowercase()
 }
