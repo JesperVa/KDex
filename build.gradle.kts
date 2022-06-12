@@ -10,10 +10,6 @@ repositories {
     mavenCentral()
 }
 
-object Versions {
-    const val ktorVersion = "2.0.2"
-}
-
 dependencies {
     testImplementation(kotlin("test"))
 
