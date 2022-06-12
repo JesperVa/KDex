@@ -13,7 +13,7 @@ abstract class DefaultRequest(private val parameters: List<Pair<String, String>>
     private fun generateParams(): String = parameters.joinToString("&") { (header, value) -> "$header=$value" }
 
     abstract class DefaultBuilder<out T : DefaultRequest> {
-        protected val queryParams: ArrayList<Pair<String, String>> = ArrayList()
+        protected val queryParams: MutableList<Pair<String, String>> = ArrayList()
 
         protected fun addQueryParam(param: String, value: String) {
             queryParams.add(Pair(param, value))
