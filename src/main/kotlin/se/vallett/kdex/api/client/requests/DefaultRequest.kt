@@ -34,7 +34,7 @@ abstract class DefaultRequest(private val parameters: List<Pair<String, String>>
             queryParams.add(Pair(param, value.serializedName))
         }
 
-        protected fun addQueryParam(param: String, values: Iterable<*>) {
+        protected fun addQueryParam(param: String, values: Iterable<Any>) {
             values.forEach { value ->
                 val serializedValue = if (value is NamedSerializableValue) value.serializedName else value.toString()
                 queryParams.add(Pair("$param[]", serializedValue))
