@@ -35,8 +35,6 @@ class MangaList(queryParams: List<Pair<String, String>>) : DefaultRequest(queryP
         fun title(title: String) = apply { addQueryParam("title", title) }
         fun updatedAtSince(updatedAtSince: String) = apply { addQueryParam("updatedAtSince", updatedAtSince) }
         fun year(year: Int) = apply { addQueryParam("year", year) }
-        override fun build(): MangaList {
-            return MangaList(queryParams)
-        }
+        override fun build(): MangaList = MangaList(queryParams)
     }
 }
