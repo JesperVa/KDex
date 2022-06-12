@@ -1,5 +1,7 @@
 package se.vallett.kdex.api.client.requests
 
+import se.vallett.kdex.api.NamedSerializableValue
+
 abstract class DefaultRequest(private val parameters: List<Pair<String, String>>) {
     abstract val defaultEndpoint: String
 
@@ -25,8 +27,18 @@ abstract class DefaultRequest(private val parameters: List<Pair<String, String>>
             queryParams.add(Pair(param, value.name))
         }
 
+        @JvmName("addQueryParamSerializedName")
+        protected fun <T> addQueryParam(param: String, value: T)
+                where T : Enum<T>,
+                      T : NamedSerializableValue {
+            queryParams.add(Pair(param, value.serializedName))
+        }
+
         protected fun addQueryParam(param: String, values: Iterable<*>) {
-            values.forEach { value -> queryParams.add(Pair("$param[]", value.toString())) }
+            values.forEach { value ->
+                val serializedValue = if (value is NamedSerializableValue) value.serializedName else value.toString()
+                queryParams.add(Pair("$param[]", serializedValue))
+            }
         }
 
         abstract fun build(): T

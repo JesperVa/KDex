@@ -104,7 +104,7 @@ internal class MangaListRequestTest {
     fun testStatus() {
         val builder = MangaList.Builder()
 
-        val request = builder.status(listOf(MangaStatus.cancelled, MangaStatus.hiatus)).build().getRequest()
+        val request = builder.status(listOf(MangaStatus.CANCELLED, MangaStatus.HIATUS)).build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?status[]=cancelled&status[]=hiatus", request)
     }
@@ -140,7 +140,7 @@ internal class MangaListRequestTest {
     fun testPublicationDemographic() {
         val builder = MangaList.Builder()
 
-        val request = builder.publicationDemographic(listOf(MangaPublicationDemographic.shoujo, MangaPublicationDemographic.josei)).build().getRequest()
+        val request = builder.publicationDemographic(listOf(MangaPublicationDemographic.SHOUJO, MangaPublicationDemographic.JOSEI)).build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?publicationDemographic[]=shoujo&publicationDemographic[]=josei", request)
     }
@@ -160,7 +160,7 @@ internal class MangaListRequestTest {
         val builder = MangaList.Builder()
 
         //Very suitable ratings
-        val request = builder.contentRating(listOf(MangaContentRating.erotica, MangaContentRating.safe)).build().getRequest()
+        val request = builder.contentRating(listOf(MangaContentRating.EROTICA, MangaContentRating.SAFE)).build().getRequest()
 
         assertEquals("https://api.mangadex.org/manga?contentRating[]=erotica&contentRating[]=safe", request)
     }
