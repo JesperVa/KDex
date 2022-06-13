@@ -105,4 +105,4 @@
 - name: KDOC_WITHOUT_RETURN_TAG
   enabled: false
 - name: KDOC_NO_CONSTRUCTOR_PROPERTY
-  enabled: true
+  enabled: false
