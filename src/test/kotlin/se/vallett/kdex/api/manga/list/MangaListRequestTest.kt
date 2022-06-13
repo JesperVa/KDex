@@ -124,7 +124,7 @@ internal class MangaListRequestTest {
             listOf(
                 MangaPublicationDemographic.SHOUJO,
                 MangaPublicationDemographic.JOSEI,
-            )
+            ),
         ).build().getRequest()
 
         request shouldBeMangaUrl "publicationDemographic[]=shoujo&publicationDemographic[]=josei"
