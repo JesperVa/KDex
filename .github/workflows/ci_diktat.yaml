@@ -6,12 +6,11 @@ on:
   push:
 
 jobs:
-  setup_gradle:
-    uses: ./.github/workflows/ci_setup_gradle.yaml
   run_diktat:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup_gradle
       - name: ls
         run: ls -la -R /home/runner/work/KDex
       - name: Run diktat
