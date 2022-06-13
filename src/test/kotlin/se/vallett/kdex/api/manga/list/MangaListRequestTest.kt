@@ -130,7 +130,6 @@ internal class MangaListRequestTest {
         request shouldBeMangaUrl "publicationDemographic[]=shoujo&publicationDemographic[]=josei"
     }
 
-
     @Test
     fun testIds() {
         val builder = MangaList.Builder()
