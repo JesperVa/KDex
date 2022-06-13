@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: ls
+        run: ls -R /home
       - name: Setup Gradle
         uses: ./.github/workflows/ci_setup_gradle
       - name: Run diktat
