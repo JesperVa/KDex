@@ -5,5 +5,5 @@ import io.ktor.client.statement.HttpResponse
 import se.vallett.kdex.api.manga.list.MangaList
 
 interface IKDexClient {
-    fun searchManga(mangaList: MangaList) : HttpResponse
+    fun searchManga(mangaList: MangaList): HttpResponse
 }
