@@ -1,0 +1,22 @@
+name: Check style via Diktat
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: Run diktat
+        uses: gradle/gradle-build-action@v2.2.0
+        with:
+          arguments: diktatCheck --no-daemon
+      - name: Upload SARIF Report
+        uses: github/codeql-action/upload-sarif@v2
+        if: ${{ always() }}
+        with:
+          sarif_file: ${{ github.workspace }}
