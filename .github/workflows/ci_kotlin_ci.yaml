@@ -1,10 +1,10 @@
 name: CI build and unit tests
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+  push:
 
 jobs:
   build:
