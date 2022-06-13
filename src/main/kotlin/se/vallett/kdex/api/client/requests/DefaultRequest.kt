@@ -5,7 +5,7 @@ import se.vallett.kdex.api.NamedSerializableValue
 abstract class DefaultRequest(private val parameters: List<Pair<String, String>>) {
     abstract val defaultEndpoint: String
 
-    //TODO add configured URL
+    // TODO add configured URL
     fun getRequest(): String = "https://api.mangadex.org/$defaultEndpoint${buildParameters()}"
 
     private fun buildParameters(): String = "?${generateParams()}"
