@@ -38,7 +38,6 @@
 - name: CLASS_NAME_INCORRECT
   enabled: false
 
-# stupid rule lmao
 - name: CUSTOM_GETTERS_SETTERS
   enabled: false
 
@@ -57,6 +56,43 @@
 - name: WRONG_INDENTATION
   enabled: false
 
+- name: GENERIC_VARIABLE_WRONG_DECLARATION
+  enabled: false
+
+# way too strict for no real gain
+- name: FUNCTION_BOOLEAN_PREFIX
+  enabled: false
+
+- name: KDOC_NO_NEWLINES_BETWEEN_BASIC_TAGS
+  enabled: false
+
+- name: KDOC_TRIVIAL_KDOC_ON_FUNCTION
+  enabled: false
+
+# :)
+- name: MAGIC_NUMBER
+  enabled: false
+
+- name: WRONG_DECLARATIONS_ORDER
+  enabled: false
+
+- name: SAY_NO_TO_VAR
+  enabled: false
+
+- name: TOO_LONG_FUNCTION
+  enabled: true
+  configuration:
+    maxFunctionLength: '60'
+
+- name: TOO_MANY_PARAMETERS
+  enabled: true
+  configuration:
+    maxParameterListSize: '7'
+
+# ?????
+- name: AVOID_NULL_CHECKS
+  enabled: false
+
 # disable kdoc rules for now
 - name: MISSING_KDOC_TOP_LEVEL
   enabled: false
@@ -68,3 +104,5 @@
   enabled: false
 - name: KDOC_WITHOUT_RETURN_TAG
   enabled: false
+- name: KDOC_NO_CONSTRUCTOR_PROPERTY
+  enabled: true
