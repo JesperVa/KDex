@@ -13,8 +13,8 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
 
-    implementation("io.ktor:ktor-client-core:${Versions.ktorVersion}")
-    implementation("io.ktor:ktor-client-okhttp:${Versions.ktorVersion}")
+    implementation("io.ktor:ktor-client-core:${Versions.ktor}")
+    implementation("io.ktor:ktor-client-okhttp:${Versions.ktor}")
 }
 
 tasks {
