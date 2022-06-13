@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Gradle
-        uses: ./.github/workflows/ci_setup_gradle.yaml
+        uses: ./.github/workflows/ci_setup_gradle
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v2.2.0
         with:
