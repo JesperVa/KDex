@@ -2,8 +2,9 @@ package se.vallett.kdex.api.manga.list
 
 import se.vallett.kdex.api.client.requests.DefaultRequest
 import se.vallett.kdex.api.manga.list.paramvalues.*
+import se.vallett.kdex.api.parameters.Parameters
 
-class MangaList(queryParams: List<Pair<String, String>>) : DefaultRequest(queryParams) {
+class MangaList(parameters: Parameters) : DefaultRequest(parameters) {
     override val defaultEndpoint: String
         get() = "manga"
 
@@ -60,6 +61,6 @@ class MangaList(queryParams: List<Pair<String, String>>) : DefaultRequest(queryP
 
         fun year(year: Int) = apply { addQueryParam("year", year) }
 
-        override fun build(): MangaList = MangaList(queryParams)
+        override fun build(): MangaList = MangaList(parameters.build())
     }
 }

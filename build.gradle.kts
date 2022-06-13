@@ -52,6 +52,7 @@ tasks {
     }
 
     register("integrationTest", Test::class) {
+        group = "verification"
         useJUnitPlatform() {
             includeTags("integration")
         }
