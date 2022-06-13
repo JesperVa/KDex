@@ -24,7 +24,3 @@ jobs:
         uses: gradle/gradle-build-action@v2.2.0
         with:
           arguments: build --no-daemon
-      - name: Test with Gradle
-        uses: gradle/gradle-build-action@v2.2.0
-        with:
-         arguments: test --no-daemon
