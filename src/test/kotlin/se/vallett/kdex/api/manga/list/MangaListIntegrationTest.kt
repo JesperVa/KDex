@@ -10,7 +10,6 @@ import kotlin.test.AfterTest
 
 @IntegrationTest
 class MangaListIntegrationTest {
-
     private val client: KDexClient = KDexClient()
 
     @AfterTest
@@ -25,5 +24,4 @@ class MangaListIntegrationTest {
 
         response.status.isSuccess().shouldBeTrue()
     }
-
 }
