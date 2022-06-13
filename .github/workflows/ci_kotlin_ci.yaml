@@ -20,6 +20,10 @@ jobs:
         run: chmod +x ./gradlew
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1.0.4
+      - name: Run diktat
+        uses: gradle/gradle-build-action@v2.2.0
+        with:
+          arguments: diktatCheck --no-daemon
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v2.2.0
         with:
