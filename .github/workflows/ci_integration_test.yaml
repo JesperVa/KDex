@@ -5,10 +5,11 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  intergration_test:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
       - name: Setup Gradle
         uses: ./.github/workflows/ci_setup_gradle.yaml
       - name: Gradle Build Action
