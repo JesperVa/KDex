@@ -124,12 +124,11 @@ internal class MangaListRequestTest {
             listOf(
                 MangaPublicationDemographic.SHOUJO,
                 MangaPublicationDemographic.JOSEI,
-            )
+            ),
         ).build().getRequest()
 
         request shouldBeMangaUrl "publicationDemographic[]=shoujo&publicationDemographic[]=josei"
     }
-
 
     @Test
     fun testIds() {
@@ -142,7 +141,7 @@ internal class MangaListRequestTest {
     @Test
     fun testContentRating() {
         val builder = MangaList.Builder()
-        //Very suitable ratings
+        // Very suitable ratings
         val request =
             builder.contentRating(listOf(MangaContentRating.EROTICA, MangaContentRating.SAFE)).build().getRequest()
 
