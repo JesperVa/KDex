@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Setup Gradle
+        uses: ./.github/workflows/ci_setup_gradle.yaml
       - name: Run diktat
         uses: gradle/gradle-build-action@v2.2.0
         with:
