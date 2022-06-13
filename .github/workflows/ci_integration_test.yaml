@@ -2,9 +2,11 @@ name: CI Integration tests
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
-  intergration_test:
+  integration_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
