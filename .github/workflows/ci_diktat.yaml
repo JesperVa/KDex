@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ls
-        run: ls -R /home
+        run: ls -R /home/runner/work/KDex
       - name: Setup Gradle
         uses: ./.github/workflows/ci_setup_gradle
       - name: Run diktat
