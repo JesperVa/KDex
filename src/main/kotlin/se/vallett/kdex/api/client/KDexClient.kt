@@ -15,7 +15,7 @@ class KDexClient : IKDexClient, Closeable {
      *
      * See [Get search manga](https://api.mangadex.org/swagger.html#/Manga/get-search-manga)
      */
-    override fun searchManga(mangaList: MangaList) : HttpResponse = runBlocking {
+    override fun searchManga(mangaList: MangaList): HttpResponse = runBlocking {
         client.get(mangaList.getRequest())
     }
 
