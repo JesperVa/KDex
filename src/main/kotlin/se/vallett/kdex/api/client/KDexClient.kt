@@ -17,7 +17,7 @@ class KDexClient : IKDexClient, Closeable {
      */
     override fun searchManga(mangaList: MangaList) : HttpResponse {
         return runBlocking {
-            client.get(mangaList.getRequest());
+            client.get(mangaList.getRequest())
         }
     }
 
