@@ -19,7 +19,11 @@ class MangaListIntegrationTest {
 
     @Test
     fun testMangaListCall() {
-        val list = MangaList.Builder().limit(1).year(2022).status(listOf(MangaStatus.COMPLETED)).build()
+        val list = MangaList.Builder()
+            .limit(1)
+            .year(2022)
+            .status(listOf(MangaStatus.COMPLETED))
+            .build()
         val response = client.searchManga(list)
 
         response.status.isSuccess().shouldBeTrue()
