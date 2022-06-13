@@ -11,8 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup_gradle
-      - name: ls
-        run: ls -la -R /home/runner/work/KDex
       - name: Run diktat
         uses: gradle/gradle-build-action@v2.2.0
         with:

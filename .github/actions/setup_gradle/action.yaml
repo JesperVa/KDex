@@ -1,5 +1,6 @@
 name: 'Setup Gradle'
 description: 'Sets gradle up with stuff'
+
 runs:
   using: "composite"
   steps:
