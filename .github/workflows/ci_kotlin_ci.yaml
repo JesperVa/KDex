@@ -24,3 +24,8 @@ jobs:
         uses: gradle/gradle-build-action@v2.2.0
         with:
           arguments: build --no-daemon
+      - name: Upload SARIF Report
+        uses: github/codeql-action/upload-sarif@v2
+        if: ${{ always() }}
+        with:
+          sarif_file: ${{ github.workspace }}
