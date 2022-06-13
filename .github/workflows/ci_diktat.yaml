@@ -6,9 +6,10 @@ on:
   push:
 
 jobs:
-  build:
+  run_diktat:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Setup Gradle
         uses: ./.github/workflows/ci_setup_gradle.yaml
       - name: Run diktat
