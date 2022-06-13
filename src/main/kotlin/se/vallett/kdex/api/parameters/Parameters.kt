@@ -50,9 +50,9 @@ internal class ParametersBuilder : Parameters {
     fun build(): Parameters = ParametersImpl(delegate.toMap())
 }
 
-internal fun Iterable<QueryParameter>.encodeToUrlParameters(): String = flatMap {
-    when (it) {
-        is Parameter -> listOf("${it.name}=${it.value}")
-        is ArrayParameter -> it.values.map { value -> "${it.name}[]=$value" }
+internal fun Iterable<QueryParameter>.encodeToUrlParameters(): String = flatMap { parameter ->
+    when (parameter) {
+        is Parameter -> listOf("${parameter.name}=${parameter.value}")
+        is ArrayParameter -> parameter.values.map { "${parameter.name}[]=$it" }
     }
 }.joinToString(separator = "&")
