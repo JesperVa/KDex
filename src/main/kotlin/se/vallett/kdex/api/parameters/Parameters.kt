@@ -53,6 +53,6 @@ internal class ParametersBuilder : Parameters {
 internal fun Iterable<QueryParameter>.encodeToUrlParameters(): String = flatMap {
     when (it) {
         is Parameter -> listOf("${it.name}=${it.value}")
-        is ArrayParameter -> it.values.map { value -> "${it.name}[]=${value}" }
+        is ArrayParameter -> it.values.map { value -> "${it.name}[]=$value" }
     }
 }.joinToString(separator = "&")
