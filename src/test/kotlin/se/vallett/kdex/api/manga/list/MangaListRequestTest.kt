@@ -141,7 +141,7 @@ internal class MangaListRequestTest {
     @Test
     fun testContentRating() {
         val builder = MangaList.Builder()
-        //Very suitable ratings
+        // Very suitable ratings
         val request =
             builder.contentRating(listOf(MangaContentRating.EROTICA, MangaContentRating.SAFE)).build().getRequest()
 
