@@ -1,7 +1,7 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType
 
 plugins {
-    kotlin("jvm") version "1.7.0"
+    kotlin("jvm") version Versions.kotlin
     id("com.adarshr.test-logger") version "3.2.0"
     id("org.cqfn.diktat.diktat-gradle-plugin") version "1.1.0"
     application
@@ -35,13 +35,13 @@ diktat {
 tasks {
     compileKotlin {
         kotlinOptions {
-            jvmTarget = "17"
+            jvmTarget = Versions.jvm
         }
     }
 
     compileTestKotlin {
         kotlinOptions {
-            jvmTarget = "17"
+            jvmTarget = Versions.jvm
         }
     }
 
