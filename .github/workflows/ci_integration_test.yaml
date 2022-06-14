@@ -9,8 +9,10 @@ jobs:
   integration_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup_gradle
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Setup Gradle
+        uses: ./.github/actions/setup_gradle
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v2.2.0
         with:
